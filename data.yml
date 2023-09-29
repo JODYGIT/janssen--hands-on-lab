@@ -1,7 +1,30 @@
 defaultStorageMapping: WORK
 installedPackages: {}
-jobs: {}
-locations: {}
+jobs:
+  Job-1:
+    excludeSelector: ""
+    id: 1
+    includeSelector: "+{ location: WORK name: FCT_LINEITEM_ORDERS_DIM_LOOKUP }"
+    name: Job1
+    steps: []
+    subgraphs: []
+locations:
+  SRC:
+    mappingDefinitions:
+      "5":
+        database: SNOWFLAKE_SAMPLE_DATA
+        schema: TPCH_SF1
+      "6":
+        database: SNOWFLAKE_SAMPLE_DATA
+        schema: TPCH_SF1
+  WORK:
+    mappingDefinitions:
+      "5":
+        database: JANSSEN
+        schema: WORKTEST
+      "6":
+        database: JANSSEN
+        schema: WORKPROD
 macros: {}
 packages: {}
 projects: {}
